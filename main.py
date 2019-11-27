@@ -1,8 +1,15 @@
 import csv
+import configparser
 
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+settings = Gtk.Settings.get_default()
+settings.set_property("gtk-application-prefer-dark-theme", config['DEFAULT']['Darkmode'] == 'True')
 
 class PeriodicTable(Gtk.Window):
 	def __init__(self):
