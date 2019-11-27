@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class PeriodicTable(Gtk.Window):
 	def __init__(self):
-		Gtk.Window.__init__(self, title="Hello World")
+		Gtk.Window.__init__(self, title="Periodic Table")
 		
 		self.notebook = Gtk.Notebook()
 		self.add(self.notebook)
